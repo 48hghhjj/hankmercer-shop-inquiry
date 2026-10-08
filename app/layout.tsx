@@ -46,7 +46,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${caslon.variable}`}>
-      <body className="flex min-h-screen flex-col font-sans antialiased">
+      <body
+        className="flex min-h-screen flex-col font-sans antialiased"
+        suppressHydrationWarning
+      >
         <SiteHeader />
         <main className="flex-1">{children}</main>
         <SiteFooter />
