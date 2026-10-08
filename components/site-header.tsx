@@ -1,27 +1,20 @@
-import Link from 'next/link'
-import { inquiryHref } from '@/lib/products'
+import { AUTHOR, BOOK_PRICE, BOOK_TITLE } from '@/lib/book'
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-        <Link href="/" className="font-serif text-2xl tracking-tight">
-          Hank Mercer
-        </Link>
-        <nav aria-label="Main" className="flex items-center gap-6 text-sm">
-          <Link href="/#shop" className="text-muted-foreground transition-colors hover:text-foreground">
-            Shop
-          </Link>
-          <Link href="/#about" className="text-muted-foreground transition-colors hover:text-foreground">
-            About
-          </Link>
-          <a
-            href={inquiryHref()}
-            className="rounded-full border border-border px-4 py-1.5 transition-colors hover:border-primary hover:text-primary"
-          >
-            Contact
-          </a>
-        </nav>
+    <header>
+      <a href="#contents" className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:bg-card focus:px-3 focus:py-2">
+        Skip to book contents
+      </a>
+      <div className="bg-secondary py-2 text-center text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
+        {BOOK_TITLE} · {BOOK_PRICE}
+      </div>
+      <div className="mx-auto flex max-w-5xl items-center justify-between border-b border-border px-6 py-5">
+        <span className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em]">
+          <span className="h-0.5 w-5 bg-primary" aria-hidden="true" />
+          {AUTHOR}
+        </span>
+        <span className="hidden text-[10px] uppercase tracking-[0.2em] text-muted-foreground sm:block">{BOOK_TITLE}</span>
       </div>
     </header>
   )

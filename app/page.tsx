@@ -1,13 +1,16 @@
-import { AboutSection } from '@/components/about-section'
+import { Chapters, FinalCta, Gallery, Intro, SampleQuote, WideImage } from '@/components/book-sections'
 import { Hero } from '@/components/hero'
-import { ProductGrid } from '@/components/product-grid'
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <Hero />
-      <ProductGrid />
-      <AboutSection />
+      <Intro />
+      <WideImage />
+      <Chapters />
+      <SampleQuote />
+      <Gallery />
+      <FinalCta />
     </>
   )
 }
