@@ -6,14 +6,14 @@ import { AUTHOR, BOOK_PAGES } from '@/lib/book'
 export function Hero() {
   return (
     <section className="mx-auto flex max-w-5xl flex-col items-center px-6 pt-12 text-center">
-      <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-primary">Everyday American trucking life</p>
+      <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-primary">From the Hank Mercer channel</p>
       <h1 className="mt-5 font-serif text-5xl leading-[0.95] tracking-tight text-balance md:text-7xl">
-        Home between
+        Sharp on the road.
         <br />
-        <em className="text-primary">the hauls.</em>
+        <em className="text-primary">Steady at home.</em>
       </h1>
       <p className="mt-6 max-w-md text-pretty font-serif text-lg leading-relaxed text-muted-foreground">
-        A practical companion for a smoother home time, clearer paperwork, and the ordinary parts of the job.
+        The working driver&apos;s playbook for staying sharp, organized, and steady — on the long haul and between hauls.
       </p>
 
       <div className="relative mt-10 aspect-video w-full max-w-3xl overflow-hidden rounded-sm">

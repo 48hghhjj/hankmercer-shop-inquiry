@@ -15,13 +15,13 @@ const caslon = Libre_Caslon_Text({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://hankmercer.shop'),
-  title: 'The Home Time Companion | Hank Mercer',
+  title: "The Working Driver's Playbook | Hank Mercer",
   description:
-    'A 184-page digital companion for everyday trucking life: smoother home time, clearer paperwork, and the ordinary parts of the job.',
+    'The working driver\u2019s playbook for staying sharp, organized, and steady \u2014 on the long haul and between hauls. A 66-page digital companion from the Hank Mercer channel.',
   generator: 'v0.app',
   openGraph: {
-    title: 'The Home Time Companion | Hank Mercer',
-    description: 'Home between the hauls. A practical companion for everyday trucking life.',
+    title: "The Working Driver's Playbook | Hank Mercer",
+    description: 'Sharp on the road. Steady at home. The working driver\u2019s playbook from the Hank Mercer channel.',
     images: ['/hank/hank-portrait.png'],
   },
   icons: {

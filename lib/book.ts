@@ -1,7 +1,8 @@
 export const AUTHOR = 'Hank Mercer'
-export const BOOK_TITLE = 'The Home Time Companion'
+export const BOOK_TITLE = "The Working Driver's Playbook"
 export const BOOK_PRICE = 'US$27.99'
-export const BOOK_PAGES = 184
+export const BOOK_PAGES = 66
+export const BOOK_TAGLINE = 'Sharp on the road. Steady at home.'
 export const CONTACT_EMAIL = 'hello@hankmercer.shop'
 
 // Paste your Hotmart / Gumroad / Shopify checkout link here. Until then the
@@ -19,17 +20,17 @@ export const chapters = [
   {
     range: '01–03',
     title: 'Come home to a little order.',
-    description: 'A landing routine for the first evening back, a laundry-and-bag reset, and a kitchen-table spot for paperwork.',
+    description: 'A landing routine for the first evening back, a laundry-and-bag reset, and a kitchen-table spot for paperwork — plus a wind-down that actually lets you rest.',
   },
   {
     range: '04–06',
     title: 'Keep the paperwork findable.',
-    description: 'Simple folders for receipts, settlements, and logs, plus a monthly ten-minute check you can actually keep.',
+    description: 'Trip envelopes and simple folders for receipts, settlements, and logs — a paperwork system that works in the cab and at home, plus a monthly ten-minute check you can actually keep.',
   },
   {
     range: '07–09',
     title: 'Make the next call clearer.',
-    description: 'Plain ways to ask dispatch a question, confirm a detail, and follow up on an office exchange without the back-and-forth.',
+    description: 'Plain ways to ask dispatch a question, confirm a detail, and follow up without the back-and-forth — on the road and from home.',
   },
   {
     range: '10–13',
@@ -39,7 +40,7 @@ export const chapters = [
   {
     range: '14–17',
     title: 'Keep the habits that help.',
-    description: 'Notes on your phone, a personal checklist, and a home-time plan that fits the way you already live.',
+    description: 'Know your numbers — what a kilometre costs you loaded and empty — plus notes on your phone, a personal checklist, and a home-time plan that fits the way you already live.',
   },
 ]
 

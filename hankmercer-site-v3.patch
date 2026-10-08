@@ -1,0 +1,192 @@
+diff --git a/app/layout.tsx b/app/layout.tsx
+index c349713..5fe64fe 100644
+--- a/app/layout.tsx
++++ b/app/layout.tsx
+@@ -15,13 +15,13 @@ const caslon = Libre_Caslon_Text({
+ 
+ export const metadata: Metadata = {
+   metadataBase: new URL('https://hankmercer.shop'),
+-  title: 'The Home Time Companion | Hank Mercer',
++  title: "The Working Driver's Playbook | Hank Mercer",
+   description:
+-    'A 184-page digital companion for everyday trucking life: smoother home time, clearer paperwork, and the ordinary parts of the job.',
++    'The working driver\u2019s playbook for staying sharp, organized, and steady \u2014 on the long haul and between hauls. A 66-page digital companion from the Hank Mercer channel.',
+   generator: 'v0.app',
+   openGraph: {
+-    title: 'The Home Time Companion | Hank Mercer',
+-    description: 'Home between the hauls. A practical companion for everyday trucking life.',
++    title: "The Working Driver's Playbook | Hank Mercer",
++    description: 'Sharp on the road. Steady at home. The working driver\u2019s playbook from the Hank Mercer channel.',
+     images: ['/hank/hank-portrait.png'],
+   },
+   icons: {
+diff --git a/app/page.tsx b/app/page.tsx
+index 57c1e57..e44ac11 100644
+--- a/app/page.tsx
++++ b/app/page.tsx
+@@ -1,4 +1,4 @@
+-import { Chapters, FinalCta, Gallery, Intro, SampleQuote, WideImage } from '@/components/book-sections'
++import { Chapters, FinalCta, FromTheChannel, Gallery, Intro, SampleQuote, WideImage } from '@/components/book-sections'
+ import { Hero } from '@/components/hero'
+ 
+ export default function HomePage() {
+@@ -8,6 +8,7 @@ export default function HomePage() {
+       <Intro />
+       <WideImage />
+       <Chapters />
++      <FromTheChannel />
+       <SampleQuote />
+       <Gallery />
+       <FinalCta />
+diff --git a/components/book-cover.tsx b/components/book-cover.tsx
+index 52f0ea0..00b3481 100644
+--- a/components/book-cover.tsx
++++ b/components/book-cover.tsx
+@@ -6,12 +6,12 @@ export function BookCover() {
+     <div
+       className="flex w-40 shrink-0 flex-col items-center gap-2 rounded-sm border border-border bg-card px-3 py-4 text-center shadow-[6px_8px_20px_rgba(38,35,30,0.25)]"
+       role="img"
+-      aria-label={`Book cover: The Home Time Companion by ${AUTHOR}`}
++      aria-label={`Book cover: The Working Driver's Playbook by ${AUTHOR}`}
+     >
+       <span className="font-serif text-[9px] uppercase tracking-[0.2em] text-primary">The</span>
+-      <span className="font-serif text-lg uppercase leading-none tracking-wide text-primary">Home Time</span>
+-      <span className="font-serif text-sm uppercase leading-none tracking-wide text-primary">Companion</span>
+-      <span className="text-[6px] text-muted-foreground">Everyday organisation for life off the road</span>
++      <span className="font-serif text-base uppercase leading-none tracking-wide text-primary">Working Driver&apos;s</span>
++      <span className="font-serif text-sm uppercase leading-none tracking-wide text-primary">Playbook</span>
++      <span className="text-[6px] text-muted-foreground">Sharp on the road. Steady at home.</span>
+       <div className="relative aspect-[4/3] w-full overflow-hidden">
+         <Image src="/hank/hank-portrait.png" alt="" fill sizes="160px" className="object-cover" />
+       </div>
+diff --git a/components/book-sections.tsx b/components/book-sections.tsx
+index 2d9d4dc..86ae250 100644
+--- a/components/book-sections.tsx
++++ b/components/book-sections.tsx
+@@ -11,18 +11,20 @@ export function Intro() {
+     <section className="mx-auto mt-20 max-w-2xl border-t border-border px-6 pt-14">
+       <Eyebrow>A book for the parts that add up</Eyebrow>
+       <h2 className="mt-4 font-serif text-3xl leading-tight text-balance md:text-4xl">
+-        The paperwork. The phone calls.
++        The rate math. The paperwork. The phone calls.
+         <br />
+         The bag by the door you never quite unpack.
+       </h2>
+       <div className="mt-6 flex flex-col gap-4 leading-relaxed text-muted-foreground">
+         <p>
+           A lot of life happens around the driving. A receipt you need to find. A message to dispatch that could be
+-          clearer. A few days at home that go by faster than they should.
++          clearer. A rate that looks good until you do the real math. A few days at home that go by faster than they
++          should.
+         </p>
+         <p>
+           <strong className="font-semibold text-foreground">{BOOK_TITLE}</strong> puts those everyday details in one
+-          place. Short guides, plain-language examples, and reusable worksheets you can come back to whenever they help.
++          place. Short guides, plain-language examples, and reusable worksheets you can come back to whenever they help —
++          the same plain talk as the Hank Mercer channel, in a form you can keep in the cab and at the kitchen table.
+         </p>
+         <p>No need to adopt a whole new system. Start with the one small thing you want to make easier.</p>
+       </div>
+@@ -69,6 +71,25 @@ export function Chapters() {
+   )
+ }
+ 
++export function FromTheChannel() {
++  return (
++    <section className="mx-auto mt-20 max-w-2xl border-t border-border px-6 pt-14">
++      <Eyebrow>From the channel</Eyebrow>
++      <h2 className="mt-4 font-serif text-3xl md:text-4xl">The book behind the breakdowns.</h2>
++      <div className="mt-6 flex flex-col gap-4 leading-relaxed text-muted-foreground">
++        <p>
++          Every video on the Hank Mercer channel ends in the same place: the decisions a working driver makes alone —
++          in the cab, at the fuel island, at the kitchen table. This book is those decisions, written down.
++        </p>
++        <p>
++          No single video covers it all. The companion does — the checklists, the numbers, and the habits behind thirty
++          years of staying sharp on the road and steady at home.
++        </p>
++      </div>
++    </section>
++  )
++}
++
+ export function SampleQuote() {
+   return (
+     <section className="mx-auto mt-16 max-w-2xl border-t border-border px-6 pt-14">
+@@ -111,7 +132,7 @@ export function FinalCta() {
+         A place to start.
+         <br />A book to come back to.
+       </h2>
+-      <p className="mt-4 text-muted-foreground">Everyday organisation, clearer conversations, and better home time.</p>
++      <p className="mt-4 text-muted-foreground">Stay sharp on the road and steady at home — the working driver&apos;s playbook, from the channel.</p>
+       <BuyButton className="mt-8" />
+       <p className="mt-6 text-[11px] leading-relaxed text-muted-foreground">
+         General organisation and communication ideas. No promise of increased pay or career advancement.
+diff --git a/components/hero.tsx b/components/hero.tsx
+index 4222e90..955755f 100644
+--- a/components/hero.tsx
++++ b/components/hero.tsx
+@@ -6,14 +6,14 @@ import { AUTHOR, BOOK_PAGES } from '@/lib/book'
+ export function Hero() {
+   return (
+     <section className="mx-auto flex max-w-5xl flex-col items-center px-6 pt-12 text-center">
+-      <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-primary">Everyday American trucking life</p>
++      <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-primary">From the Hank Mercer channel</p>
+       <h1 className="mt-5 font-serif text-5xl leading-[0.95] tracking-tight text-balance md:text-7xl">
+-        Home between
++        Sharp on the road.
+         <br />
+-        <em className="text-primary">the hauls.</em>
++        <em className="text-primary">Steady at home.</em>
+       </h1>
+       <p className="mt-6 max-w-md text-pretty font-serif text-lg leading-relaxed text-muted-foreground">
+-        A practical companion for a smoother home time, clearer paperwork, and the ordinary parts of the job.
++        The working driver&apos;s playbook for staying sharp, organized, and steady — on the long haul and between hauls.
+       </p>
+ 
+       <div className="relative mt-10 aspect-video w-full max-w-3xl overflow-hidden rounded-sm">
+diff --git a/lib/book.ts b/lib/book.ts
+index bd0be38..45028f5 100644
+--- a/lib/book.ts
++++ b/lib/book.ts
+@@ -1,7 +1,8 @@
+ export const AUTHOR = 'Hank Mercer'
+-export const BOOK_TITLE = 'The Home Time Companion'
++export const BOOK_TITLE = "The Working Driver's Playbook"
+ export const BOOK_PRICE = 'US$27.99'
+-export const BOOK_PAGES = 184
++export const BOOK_PAGES = 66
++export const BOOK_TAGLINE = 'Sharp on the road. Steady at home.'
+ export const CONTACT_EMAIL = 'hello@hankmercer.shop'
+ 
+ // Paste your Hotmart / Gumroad / Shopify checkout link here. Until then the
+@@ -19,17 +20,17 @@ export const chapters = [
+   {
+     range: '01–03',
+     title: 'Come home to a little order.',
+-    description: 'A landing routine for the first evening back, a laundry-and-bag reset, and a kitchen-table spot for paperwork.',
++    description: 'A landing routine for the first evening back, a laundry-and-bag reset, and a kitchen-table spot for paperwork — plus a wind-down that actually lets you rest.',
+   },
+   {
+     range: '04–06',
+     title: 'Keep the paperwork findable.',
+-    description: 'Simple folders for receipts, settlements, and logs, plus a monthly ten-minute check you can actually keep.',
++    description: 'Trip envelopes and simple folders for receipts, settlements, and logs — a paperwork system that works in the cab and at home, plus a monthly ten-minute check you can actually keep.',
+   },
+   {
+     range: '07–09',
+     title: 'Make the next call clearer.',
+-    description: 'Plain ways to ask dispatch a question, confirm a detail, and follow up on an office exchange without the back-and-forth.',
++    description: 'Plain ways to ask dispatch a question, confirm a detail, and follow up without the back-and-forth — on the road and from home.',
+   },
+   {
+     range: '10–13',
+@@ -39,7 +40,7 @@ export const chapters = [
+   {
+     range: '14–17',
+     title: 'Keep the habits that help.',
+-    description: 'Notes on your phone, a personal checklist, and a home-time plan that fits the way you already live.',
++    description: 'Know your numbers — what a kilometre costs you loaded and empty — plus notes on your phone, a personal checklist, and a home-time plan that fits the way you already live.',
+   },
+ ]
+ 

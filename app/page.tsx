@@ -1,4 +1,4 @@
-import { Chapters, FinalCta, Gallery, Intro, SampleQuote, WideImage } from '@/components/book-sections'
+import { Chapters, FinalCta, FromTheChannel, Gallery, Intro, SampleQuote, WideImage } from '@/components/book-sections'
 import { Hero } from '@/components/hero'
 
 export default function HomePage() {
@@ -8,6 +8,7 @@ export default function HomePage() {
       <Intro />
       <WideImage />
       <Chapters />
+      <FromTheChannel />
       <SampleQuote />
       <Gallery />
       <FinalCta />

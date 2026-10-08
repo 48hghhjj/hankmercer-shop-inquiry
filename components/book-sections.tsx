@@ -11,18 +11,20 @@ export function Intro() {
     <section className="mx-auto mt-20 max-w-2xl border-t border-border px-6 pt-14">
       <Eyebrow>A book for the parts that add up</Eyebrow>
       <h2 className="mt-4 font-serif text-3xl leading-tight text-balance md:text-4xl">
-        The paperwork. The phone calls.
+        The rate math. The paperwork. The phone calls.
         <br />
         The bag by the door you never quite unpack.
       </h2>
       <div className="mt-6 flex flex-col gap-4 leading-relaxed text-muted-foreground">
         <p>
           A lot of life happens around the driving. A receipt you need to find. A message to dispatch that could be
-          clearer. A few days at home that go by faster than they should.
+          clearer. A rate that looks good until you do the real math. A few days at home that go by faster than they
+          should.
         </p>
         <p>
           <strong className="font-semibold text-foreground">{BOOK_TITLE}</strong> puts those everyday details in one
-          place. Short guides, plain-language examples, and reusable worksheets you can come back to whenever they help.
+          place. Short guides, plain-language examples, and reusable worksheets you can come back to whenever they help —
+          the same plain talk as the Hank Mercer channel, in a form you can keep in the cab and at the kitchen table.
         </p>
         <p>No need to adopt a whole new system. Start with the one small thing you want to make easier.</p>
       </div>
@@ -69,6 +71,25 @@ export function Chapters() {
   )
 }
 
+export function FromTheChannel() {
+  return (
+    <section className="mx-auto mt-20 max-w-2xl border-t border-border px-6 pt-14">
+      <Eyebrow>From the channel</Eyebrow>
+      <h2 className="mt-4 font-serif text-3xl md:text-4xl">The book behind the breakdowns.</h2>
+      <div className="mt-6 flex flex-col gap-4 leading-relaxed text-muted-foreground">
+        <p>
+          Every video on the Hank Mercer channel ends in the same place: the decisions a working driver makes alone —
+          in the cab, at the fuel island, at the kitchen table. This book is those decisions, written down.
+        </p>
+        <p>
+          No single video covers it all. The companion does — the checklists, the numbers, and the habits behind thirty
+          years of staying sharp on the road and steady at home.
+        </p>
+      </div>
+    </section>
+  )
+}
+
 export function SampleQuote() {
   return (
     <section className="mx-auto mt-16 max-w-2xl border-t border-border px-6 pt-14">
@@ -111,7 +132,7 @@ export function FinalCta() {
         A place to start.
         <br />A book to come back to.
       </h2>
-      <p className="mt-4 text-muted-foreground">Everyday organisation, clearer conversations, and better home time.</p>
+      <p className="mt-4 text-muted-foreground">Stay sharp on the road and steady at home — the working driver&apos;s playbook, from the channel.</p>
       <BuyButton className="mt-8" />
       <p className="mt-6 text-[11px] leading-relaxed text-muted-foreground">
         General organisation and communication ideas. No promise of increased pay or career advancement.
