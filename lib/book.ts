@@ -49,3 +49,22 @@ export const gallery = [
   { src: '/hank/radio-desk.png', alt: 'CB radio, road atlas, and a model truck on a home desk', caption: 'Old habits, new place.' },
   { src: '/hank/porch-dog.png', alt: 'Black Labrador lying on a porch next to work boots and a thermos', caption: 'Somebody waited up.' },
 ]
+
+export const faqs = [
+  {
+    q: 'Who is this for?',
+    a: 'Working truck drivers — company drivers and owner-operators across the US and Canada — who want practical systems for everything around the driving: paperwork, communication, money math, and home time.',
+  },
+  {
+    q: 'What format do I receive?',
+    a: 'A 66-page designed PDF with 17 chapters and a worksheet in every chapter. Instant download — read it on your phone or print the worksheets.',
+  },
+  {
+    q: 'Do I need to read it cover to cover?',
+    a: 'No. Open it at whatever is biting you this week. Each chapter stands on its own, and the worksheets work even if you only do one.',
+  },
+  {
+    q: 'What if it is not for me?',
+    a: 'Every order is covered by a 15-day money-back policy. If the playbook does not earn its place, you get your money back.',
+  },
+]

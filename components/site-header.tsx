@@ -1,4 +1,4 @@
-import { AUTHOR, BOOK_PRICE, BOOK_TITLE } from '@/lib/book'
+import { AUTHOR, BOOK_TITLE } from '@/lib/book'
 
 export function SiteHeader() {
   return (
@@ -7,7 +7,7 @@ export function SiteHeader() {
         Skip to book contents
       </a>
       <div className="bg-secondary py-2 text-center text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
-        {BOOK_TITLE} · {BOOK_PRICE}
+        Instant digital delivery · 15-day money-back policy
       </div>
       <div className="mx-auto flex max-w-5xl items-center justify-between border-b border-border px-6 py-5">
         <span className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em]">

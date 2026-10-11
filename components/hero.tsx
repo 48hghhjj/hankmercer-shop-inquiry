@@ -15,6 +15,9 @@ export function Hero() {
       <p className="mt-6 max-w-md text-pretty font-serif text-lg leading-relaxed text-muted-foreground">
         The working driver&apos;s playbook for staying sharp, organized, and steady — on the long haul and between hauls.
       </p>
+      <p className="mt-4 text-sm font-semibold tracking-[0.08em] text-foreground">
+        17 chapters. 17 worksheets. Zero fluff.
+      </p>
 
       <div className="relative mt-10 aspect-video w-full max-w-3xl overflow-hidden rounded-sm">
         <Image
@@ -39,6 +42,9 @@ export function Hero() {
           </a>
         </div>
       </div>
+      <p className="mt-8 text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+        {BOOK_PAGES} designed pages · Secure digital delivery · 15-day money-back policy
+      </p>
     </section>
   )
 }
