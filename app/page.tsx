@@ -1,4 +1,4 @@
-import { Chapters, Faq, FinalCta, FromTheChannel, Gallery, MeetHank, SampleQuote, SignalBand, UseTheBook, WhyThisBook, WideImage, Worksheets } from '@/components/book-sections'
+import { Chapters, Faq, FinalCta, FromTheChannel, Gallery, MeetHank, Offer, PhotoBreak, SampleQuote, SignalBand, WhyThisBook, WideImage, Worksheets } from '@/components/book-sections'
 import { Hero } from '@/components/hero'
 
 export default function HomePage() {
@@ -10,10 +10,11 @@ export default function HomePage() {
       <WideImage />
       <Chapters />
       <Gallery />
-      <UseTheBook />
+      <PhotoBreak />
       <Worksheets />
       <FromTheChannel />
       <SampleQuote />
+      <Offer />
       <MeetHank />
       <Faq />
       <FinalCta />

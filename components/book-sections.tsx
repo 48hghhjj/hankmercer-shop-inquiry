@@ -109,7 +109,7 @@ export function Chapters() {
 
 export function Gallery() {
   return (
-    <section className="mx-auto mt-20 max-w-5xl border-t border-border px-6 pt-14 text-center">
+    <section id="inside" className="mx-auto mt-20 max-w-5xl scroll-mt-8 border-t border-border px-6 pt-14 text-center">
       <Eyebrow>From inside the book</Eyebrow>
       <h2 className="mt-4 text-3xl font-extrabold tracking-tight md:text-4xl">
         The road and home, as they actually feel.
@@ -128,15 +128,24 @@ export function Gallery() {
   )
 }
 
-export function UseTheBook() {
+export function PhotoBreak() {
   return (
-    <section className="mx-auto mt-20 max-w-2xl border-t border-border px-6 pt-14">
-      <Eyebrow>Built for parked moments</Eyebrow>
-      <h2 className="mt-4 text-3xl font-extrabold tracking-tight md:text-4xl">
-        Use the book. Don&apos;t just read it.
-      </h2>
-      <div className="mt-6 flex flex-col gap-4 leading-relaxed text-muted-foreground">
-        <p>
+    <section className="mx-auto mt-20 grid max-w-5xl items-center gap-10 px-6 md:grid-cols-2">
+      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-sm">
+        <Image
+          src="/hank/driveway.png"
+          alt="A blue semi truck parked beside a farmhouse at golden hour"
+          fill
+          sizes="(min-width: 768px) 50vw, 100vw"
+          className="object-cover"
+        />
+      </div>
+      <div>
+        <Eyebrow>Built for parked moments</Eyebrow>
+        <h2 className="mt-4 text-3xl font-extrabold tracking-tight md:text-4xl">
+          Use the book. Don&apos;t just read it.
+        </h2>
+        <p className="mt-6 leading-relaxed text-muted-foreground">
           Run one worksheet for a week. Keep what earns its space. Then add the next one. That&apos;s the whole method —
           small, repeatable, and built for the ten minutes you actually have.
         </p>
@@ -215,7 +224,7 @@ export function SampleQuote() {
 
 export function MeetHank() {
   return (
-    <section className="mx-auto mt-20 max-w-5xl border-t border-border px-6 pt-14">
+    <section id="hank" className="mx-auto mt-20 max-w-5xl scroll-mt-8 border-t border-border px-6 pt-14">
       <div className="mx-auto flex max-w-2xl flex-col items-center gap-8 text-center md:flex-row md:text-left">
         <div className="relative aspect-square w-44 shrink-0 overflow-hidden rounded-sm">
           <Image
@@ -242,7 +251,7 @@ export function MeetHank() {
 
 export function Faq() {
   return (
-    <section className="mx-auto mt-20 max-w-2xl border-t border-border px-6 pt-14">
+    <section id="faq" className="mx-auto mt-20 max-w-2xl scroll-mt-8 border-t border-border px-6 pt-14">
       <Eyebrow>Straight answers</Eyebrow>
       <h2 className="mt-4 text-3xl font-extrabold tracking-tight md:text-4xl">Before you roll.</h2>
       <dl className="mt-8 flex flex-col">
@@ -257,29 +266,53 @@ export function Faq() {
   )
 }
 
+export function Offer() {
+  return (
+    <section id="offer" className="mx-auto mt-20 grid max-w-5xl scroll-mt-8 items-center gap-10 border-t border-border px-6 pt-14 md:grid-cols-2">
+      <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm">
+        <Image
+          src="/hank/hank-portrait.png"
+          alt={`${AUTHOR} beside his truck, ready to roll`}
+          fill
+          sizes="(min-width: 768px) 50vw, 100vw"
+          className="object-cover"
+        />
+      </div>
+      <div>
+        <Eyebrow>The complete digital playbook</Eyebrow>
+        <h2 className="mt-4 text-4xl font-black leading-tight tracking-tight text-balance">{BOOK_TITLE}</h2>
+        <p className="mt-4 text-2xl font-black">
+          {BOOK_PRICE} <span className="text-base font-bold text-muted-foreground">USD</span>
+        </p>
+        <ul className="mt-6 flex w-full flex-col gap-2 text-left text-sm text-muted-foreground">
+          <li className="border-t border-border py-3">66-page designed PDF, instant download</li>
+          <li className="border-t border-border py-3">17 chapters, 17 reusable worksheets</li>
+          <li className="border-t border-border py-3">Read it on your phone or print the pages</li>
+          <li className="border-y border-border py-3">15-day money-back policy</li>
+        </ul>
+        <BuyButton className="mt-6" />
+        <div className="mt-6 bg-primary px-6 py-5">
+          <p className="text-sm font-black uppercase tracking-[0.15em] text-[#142739]">15-day money-back policy</p>
+          <p className="mt-2 text-xs leading-relaxed text-[#142739]/80">
+            Try the worksheets. If the playbook doesn&apos;t earn its place, you get your money back.
+          </p>
+        </div>
+      </div>
+    </section>
+  )
+}
+
 export function FinalCta() {
   return (
     <section className="mx-auto mt-24 flex max-w-xl flex-col items-center px-6 text-center">
-      <Eyebrow>The complete digital playbook</Eyebrow>
-      <h2 className="mt-4 text-4xl font-black leading-tight tracking-tight text-balance">{BOOK_TITLE}</h2>
-      <p className="mt-4 text-2xl font-black">{BOOK_PRICE} USD</p>
-      <ul className="mt-6 flex w-full flex-col gap-2 text-left text-sm text-muted-foreground">
-        <li className="border-t border-border py-3">66-page designed PDF, instant download</li>
-        <li className="border-t border-border py-3">17 chapters, 17 reusable worksheets</li>
-        <li className="border-t border-border py-3">Read it on your phone or print the pages</li>
-        <li className="border-y border-border py-3">15-day money-back policy</li>
-      </ul>
-      <BuyButton className="mt-8" />
-      <div className="mt-8 w-full bg-primary px-6 py-5">
-        <p className="text-sm font-black uppercase tracking-[0.15em] text-[#142739]">15-day money-back policy</p>
-        <p className="mt-2 text-xs leading-relaxed text-[#142739]/80">
-          Try the worksheets. If the playbook doesn&apos;t earn its place, you get your money back.
-        </p>
-      </div>
-      <p className="mt-6 text-lg font-bold italic text-muted-foreground">
+      <p className="text-lg font-bold italic text-muted-foreground">
         One page. One week. One steadier mile at a time.
       </p>
-      <p className="mt-4 text-[11px] leading-relaxed text-muted-foreground">
+      <h2 className="mt-4 text-4xl font-black leading-tight tracking-tight text-balance">
+        Put the next decision back in your hands.
+      </h2>
+      <BuyButton className="mt-8" />
+      <p className="mt-6 text-[11px] leading-relaxed text-muted-foreground">
         General organisation and communication ideas. No promise of increased pay or career advancement.
       </p>
     </section>
