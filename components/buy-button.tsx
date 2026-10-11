@@ -1,20 +1,34 @@
-import { ArrowRight } from 'lucide-react'
 import { BOOK_PAGES, BOOK_PRICE, getCheckoutHref } from '@/lib/book'
 
-export function BuyButton({ className = '' }: { className?: string }) {
+export function BuyButton({
+  className = '',
+  variant = 'primary',
+  compact = false,
+}: {
+  className?: string
+  variant?: 'primary' | 'outline'
+  compact?: boolean
+}) {
+  const styles =
+    variant === 'primary'
+      ? 'bg-primary text-[#142739] hover:-translate-y-0.5 hover:shadow-[0_8px_rgba(20,39,57,0.12)]'
+      : 'border-2 border-[#294a68] text-[#294a68] hover:-translate-y-0.5'
   return (
     <div className={`flex w-full flex-col items-center gap-3 ${className}`}>
       <a
         href={getCheckoutHref()}
-        className="flex w-full items-center justify-between rounded-sm bg-primary px-6 py-4 text-sm font-semibold text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+        className={`inline-flex min-h-[52px] w-full items-center justify-center px-6 text-sm font-black transition-transform ${styles}`}
       >
-        Get the companion
-        <ArrowRight className="size-4" aria-hidden="true" />
+        {compact ? `Get the companion · ${BOOK_PRICE}` : 'Get the companion'}
       </a>
-      <p className="text-center text-xs text-muted-foreground">
-        {BOOK_PAGES}-page PDF · {BOOK_PRICE} + applicable taxes · Instant download
-      </p>
-      <p className="text-center text-xs text-muted-foreground">15-day money-back policy</p>
+      {!compact && (
+        <>
+          <p className="text-center text-xs text-muted-foreground">
+            {BOOK_PAGES}-page PDF · {BOOK_PRICE} + applicable taxes · Instant download
+          </p>
+          <p className="text-center text-xs text-muted-foreground">15-day money-back policy</p>
+        </>
+      )}
     </div>
   )
 }
