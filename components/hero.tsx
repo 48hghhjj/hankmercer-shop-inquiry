@@ -6,16 +6,16 @@ import { AUTHOR, BOOK_PAGES } from '@/lib/book'
 export function Hero() {
   return (
     <section className="mx-auto flex max-w-5xl flex-col items-center px-6 pt-12 text-center">
-      <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-primary">From the Hank Mercer channel</p>
-      <h1 className="mt-5 font-serif text-5xl leading-[0.95] tracking-tight text-balance md:text-7xl">
+      <p className="text-[11px] font-black uppercase tracking-[0.2em] text-foreground">From the Hank Mercer channel</p>
+      <h1 className="mt-5 text-5xl font-black leading-[0.95] tracking-tight text-balance md:text-7xl">
         Sharp on the road.
         <br />
-        <em className="text-primary">Steady at home.</em>
+        <span className="bg-primary px-3">Steady at home.</span>
       </h1>
-      <p className="mt-6 max-w-md text-pretty font-serif text-lg leading-relaxed text-muted-foreground">
+      <p className="mt-6 max-w-md text-pretty text-lg leading-relaxed text-muted-foreground">
         The working driver&apos;s playbook for staying sharp, organized, and steady — on the long haul and between hauls.
       </p>
-      <p className="mt-4 text-sm font-semibold tracking-[0.08em] text-foreground">
+      <p className="mt-4 text-sm font-bold tracking-[0.08em] text-foreground">
         17 chapters. 17 worksheets. Zero fluff.
       </p>
 
@@ -31,8 +31,14 @@ export function Hero() {
       </div>
 
       <div className="mt-10 flex w-full max-w-xl flex-col items-center gap-8 sm:flex-row sm:items-center">
-        <figure className="flex flex-col items-center gap-3">
+        <figure className="relative flex flex-col items-center gap-3">
           <BookCover />
+          <span
+            aria-hidden="true"
+            className="absolute -right-4 top-6 rotate-3 bg-primary px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.15em] text-[#142739] shadow-md"
+          >
+            Field-tested
+          </span>
           <figcaption className="text-xs text-muted-foreground">Your {BOOK_PAGES}-page digital companion</figcaption>
         </figure>
         <div className="flex w-full flex-col items-center gap-3">

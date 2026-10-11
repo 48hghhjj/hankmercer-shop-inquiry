@@ -6,7 +6,7 @@ export function SiteHeader() {
       <a href="#contents" className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:bg-card focus:px-3 focus:py-2">
         Skip to book contents
       </a>
-      <div className="bg-secondary py-2 text-center text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
+      <div className="bg-[#142739] py-2 text-center text-[11px] font-bold uppercase tracking-[0.2em] text-[#fbf8ea]">
         Instant digital delivery · 15-day money-back policy
       </div>
       <div className="mx-auto flex max-w-5xl items-center justify-between border-b border-border px-6 py-5">
