@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { AUTHOR, BOOK_PAGES, BOOK_PRICE, BOOK_TITLE, chapters, faqs, gallery } from '@/lib/book'
 import { BuyButton } from '@/components/buy-button'
+import { CountdownBoxes } from '@/components/countdown-timer'
 
 function Eyebrow({ children, light = false }: { children: React.ReactNode; light?: boolean }) {
   return (
@@ -266,6 +267,10 @@ export function Offer() {
             <span className="text-8xl tracking-tight">27</span>
             <span className="text-lg">.99 USD</span>
           </p>
+          <p className="mt-4 text-xs font-black uppercase tracking-[0.15em] text-[#142739]">
+            Launch pricing ends in
+          </p>
+          <CountdownBoxes className="mt-2" />
           <ul className="mt-6 flex flex-col gap-3 text-sm">
             {[
               '66-page designed PDF, instant download',

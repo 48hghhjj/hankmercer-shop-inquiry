@@ -1,4 +1,5 @@
 import { AUTHOR, BOOK_PRICE } from '@/lib/book'
+import { CountdownTimer } from '@/components/countdown-timer'
 
 const links = [
   { href: '#contents', label: 'The Playbook' },
@@ -14,7 +15,7 @@ export function SiteHeader() {
         Skip to book contents
       </a>
       <div className="bg-[#142739] py-2 text-center text-[11px] font-bold uppercase tracking-[0.2em] text-[#fbf8ea]">
-        Instant digital delivery · 15-day money-back policy
+        Instant digital delivery · 15-day money-back policy · <CountdownTimer className="text-primary" />
       </div>
       <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-6 py-4">
         <span className="flex items-center gap-3 text-xs font-black uppercase tracking-[0.2em]">

@@ -11,6 +11,11 @@ export const PAYHIP_PRODUCT_URL = 'https://payhip.com/b/BtLI7'
 export const PAYHIP_PRODUCT_ID = 'BtLI7'
 export const CHECKOUT_URL = PAYHIP_PRODUCT_URL
 
+// Limited-time offer deadline (ISO date). The countdown timer on the site
+// counts down to this. Change it to your real offer end date.
+export const OFFER_ENDS_AT = '2026-10-31T23:59:59Z'
+export const OFFER_LABEL = 'Launch pricing ends in'
+
 export function getCheckoutHref() {
   if (CHECKOUT_URL) return CHECKOUT_URL
   const subject = `Order: ${BOOK_TITLE}`
