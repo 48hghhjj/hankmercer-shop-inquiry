@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { BuyButton } from '@/components/buy-button'
+import { CountdownTimer } from '@/components/countdown-timer'
 import { BOOK_PAGES, BOOK_PRICE } from '@/lib/book'
 
 export function Hero() {
@@ -35,6 +36,9 @@ export function Hero() {
             See what&apos;s inside
           </a>
         </div>
+        <p className="mt-3 text-xs font-black uppercase tracking-[0.12em] text-[#294a68]">
+          <CountdownTimer />
+        </p>
         <p className="mt-4 text-xs text-muted-foreground">
           {BOOK_PAGES} designed pages · Secure digital delivery · 15-day money-back policy
         </p>

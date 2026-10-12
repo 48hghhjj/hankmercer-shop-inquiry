@@ -19,7 +19,7 @@ export function BuyButton({
         href={getCheckoutHref()}
         className={`inline-flex min-h-[52px] w-full items-center justify-center px-6 text-sm font-black transition-transform ${styles}`}
       >
-        {compact ? `Get the companion · ${BOOK_PRICE}` : 'Get the companion'}
+        {compact ? `Get the companion · ${BOOK_PRICE} ›` : 'Get the companion'}
       </a>
       {!compact && (
         <>
