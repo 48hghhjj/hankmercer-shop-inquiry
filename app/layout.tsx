@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from 'next'
 import { Inter, Libre_Caslon_Text } from 'next/font/google'
 import { SiteFooter } from '@/components/site-footer'
 import { SiteHeader } from '@/components/site-header'
+import { ExitPopup } from '@/components/exit-popup'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
@@ -53,6 +54,7 @@ export default function RootLayout({
         <SiteHeader />
         <main className="flex-1">{children}</main>
         <SiteFooter />
+        <ExitPopup />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
