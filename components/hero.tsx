@@ -27,7 +27,7 @@ export function Hero() {
           17 chapters. 17 worksheets. Zero fluff.
         </p>
         <div className="mt-7 flex max-w-md flex-wrap gap-3">
-          <BuyButton compact />
+          <BuyButton variant="primary" compact />
           <a
             href="#contents"
             className="inline-flex min-h-[52px] items-center justify-center border-2 border-[#294a68] px-6 text-sm font-black text-[#294a68] transition-transform hover:-translate-y-0.5"

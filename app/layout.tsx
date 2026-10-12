@@ -1,7 +1,6 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Inter, Libre_Caslon_Text } from 'next/font/google'
-import Script from 'next/script'
 import { SiteFooter } from '@/components/site-footer'
 import { SiteHeader } from '@/components/site-header'
 import './globals.css'
@@ -47,7 +46,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${caslon.variable}`}>
-      <Script src="https://payhip.com/payhip.js" strategy="beforeInteractive" />
       <body
         className="flex min-h-screen flex-col font-sans antialiased"
         suppressHydrationWarning
