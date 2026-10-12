@@ -11,10 +11,21 @@ export const PAYHIP_PRODUCT_URL = 'https://payhip.com/b/BtLI7'
 export const PAYHIP_PRODUCT_ID = 'BtLI7'
 export const CHECKOUT_URL = PAYHIP_PRODUCT_URL
 
-// Limited-time offer deadline (ISO date). The countdown timer on the site
-// counts down to this. Change it to your real offer end date.
-export const OFFER_ENDS_AT = '2026-10-31T23:59:59Z'
-export const OFFER_LABEL = 'Launch pricing ends in'
+// Offer countdown mode: 'midnight' = timer counts down to the visitor's local
+// midnight and resets every day. Or put an ISO date string here for a fixed
+// one-time deadline, e.g. '2026-10-31T23:59:59Z'.
+export const OFFER_DEADLINE: 'midnight' | string = 'midnight'
+export const OFFER_LABEL = 'Offer ends tonight in'
+
+export function getOfferDeadline(): Date {
+  if (OFFER_DEADLINE === 'midnight') {
+    const now = new Date()
+    const midnight = new Date(now)
+    midnight.setHours(24, 0, 0, 0)
+    return midnight
+  }
+  return new Date(OFFER_DEADLINE)
+}
 
 export function getCheckoutHref() {
   if (CHECKOUT_URL) return CHECKOUT_URL

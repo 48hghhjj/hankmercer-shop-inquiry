@@ -1,10 +1,10 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { OFFER_ENDS_AT, OFFER_LABEL } from '@/lib/book'
+import { OFFER_LABEL, getOfferDeadline } from '@/lib/book'
 
 function getParts() {
-  const diff = Math.max(0, new Date(OFFER_ENDS_AT).getTime() - Date.now())
+  const diff = Math.max(0, getOfferDeadline().getTime() - Date.now())
   const d = Math.floor(diff / 86400000)
   const h = Math.floor((diff % 86400000) / 3600000)
   const m = Math.floor((diff % 3600000) / 60000)
