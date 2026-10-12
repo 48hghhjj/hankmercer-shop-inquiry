@@ -5,9 +5,11 @@ export const BOOK_PAGES = 66
 export const BOOK_TAGLINE = 'Sharp on the road. Steady at home.'
 export const CONTACT_EMAIL = 'hello@hankmercer.shop'
 
-// Paste your Hotmart / Gumroad / Shopify checkout link here. Until then the
-// button opens an email inquiry so no purchase link is broken.
-export const CHECKOUT_URL = ''
+// Payhip checkout — product "The Working Driver's Playbook by Hank Mercer"
+// (Payhip product ID BtLI7). The buy buttons open Payhip's secure checkout.
+export const PAYHIP_PRODUCT_URL = 'https://payhip.com/b/BtLI7'
+export const PAYHIP_PRODUCT_ID = 'BtLI7'
+export const CHECKOUT_URL = PAYHIP_PRODUCT_URL
 
 export function getCheckoutHref() {
   if (CHECKOUT_URL) return CHECKOUT_URL
